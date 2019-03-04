@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<script src= "snake.js"> </script>
+<meta charset="UTF-8">
+<title>Snake</title>
+<style type="text/css">
+
+            ::selection {color:#FFFFFF; background:transparent;}
+            ::-moz-selection {color:#FFFFFF; background:transparent;}
+
+            *{
+                margin: 0;
+                padding: 0;
+                font-family: "VT323";
+            }
+            body{
+                background-color: #000000;
+            }
+            .wrap{
+                margin-left: auto;
+                margin-right: auto;
+            }
+            header{
+                width: 500px;
+                font-size: 0;
+            }
+            canvas{
+                display: none;
+                border-style: solid;
+                border-width: 20px;
+            }
+            canvas:focus{
+                outline: none;
+            }
+
+
+            h1{
+                display: inline-block;
+                width: 100px;
+                font-size: 32px;
+                color: "white";
+            }
+            .score{
+                display: inline-block;
+                width: 400px;
+                font-size: 20px;
+                color: #FFFFFF;
+                text-align: right;
+            }
+            .score_value{
+                font-size: inherit;
+            }
+
+            #credits a, #setting a, #menu a{
+                display: block;
+            }
+
+            #credits a, #menu a:hover{
+                cursor: pointer;
+            }
+
+            #credits a:hover::before, #setting a:hover::before, #menu a:hover::before{
+                content: ">";
+                margin-right: 10px;
+            }
+
+            #menu{
+                display: block;
+                width: 340px;
+                padding-top: 95px;
+                padding-bottom: 95px;
+                font-size: 40px;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                color: #FFF;
+            }
+
+            #menu h2{
+                -webkit-animation: logo-ani 1000ms linear infinite;
+                        animation: logo-ani 1000ms linear infinite;
+                margin-bottom: 30px;
+
+            }
+
+            #menu a{
+                font-size: 30px;
+            }
+
+
+            #credits{
+                display: none;
+                width: 340px;
+                padding-top: 95px;
+                padding-bottom: 95px;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                font-size: 30px;
+                color: #FFF;
+            }
+
+            #credits p{
+                margin-top: 25px;
+                font-size: 20px;
+            }
+
+
+</style>
+
+<body>
+
+<header class="wrap">
+                <h1>Snake</h1>
+                <p class="score">High Score 1: <span id="score_value">0</span></p>
+                <p class="score">High Score 2: <span id="score_value2">0</span></p>
+                <p class="score">High Score 3: <span id="score_value3">0</span></p>
+                <p class="score">High Score 4: <span id="score_value4">0</span></p>
+                <p class="score">High Score 5: <span id="score_value5">0</span></p>
+            </header>
+            <canvas class="wrap" id="snake" width="500" height="450" tabindex="1"></canvas>
+
+
+            <div id="credits">
+                <h2>Credits</h2>
+                <p>Gameplay: Aaron Adams</p>
+                <p>Design: Aaron Adams</p>
+                <p>Music: Aaron Adams</p>
+                <p>Blood, Sweat, & Tears: Aaron Adams</p>
+                <p>  </p>
+                <a id="newgame_credits">new game</a>
+                <a id="main_menu">main menu</a>
+            </div>
+
+            <div id="menu">
+                <h2>Snake</h2>
+                <a id="newgame_menu">new game</a>
+                <a id="setting_credits">credits</a>
+            </div>
+</body>
