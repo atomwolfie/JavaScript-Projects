@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+<head>
+    <meta charset = "UTF-8">
+    <title>Simple Maze Demo</title>
+    <script src = "main.js"></script>
+</head>
+<body onload = "initialize()">
+  <header class="wrap">
+                  <h1>Maze
+<p class="score" style="float: right;">_High Score 3: <span id="score3">0</span></p>
+<p class="score" style="float: right;">_High Score 2: <span id="score2">0</span></p>
+<p class="score" style="float: right;">_High Score 1: <span id="score1">0</span></p>
+<button type="button" id="3by3" onClick="reply_click(this.id)" style="float: right;">3 x 3</button>
+<button type="button" id="5by5" onClick="reply_click(this.id)" style="float: right;">5 x 5</button>
+<button type="button" id="10by10" onClick="reply_click(this.id)" style="float: right;">10 x 10</button>
+                  </h1>
+
+  <p class="score" style="float: right;">___Elapsed Time: <span id="time_value">0</span></p>
+  <p class="score" style="float: right;">Score: <span id="score_value">1000</span></p>
+  </header>
+    <canvas id = "canvas-main" width = "1000" height = "1000" style = "width: 50%; height: 50%"></canvas>
+    <button type="button" id="hint" onClick="reply_click(this.id)" style="float: right;">HINT</button>
+    <button type="button" id="crumbs" onClick="reply_click(this.id)" style="float: right;">bread crumbs (on/off)</button>
+    <button type="button" id="path" onClick="reply_click(this.id)" style="float: right;">show shortest path</button>
+    <button type="button" id="nextmove" onClick="reply_click(this.id)" style="float: right;">show next move</button>
+
+
+
+
+
+</body>
+</html>
